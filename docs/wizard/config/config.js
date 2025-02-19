@@ -1,13 +1,13 @@
 export default {
-    clientID: 'fd2ba742-446f-46c5-bbbc-1cad2f34ac3a',
+    clientID: '2494c879-dc5b-4e0a-9d16-fc9543b6d125',
 
     // wizardUriBase: 'http://localhost:8080/wizard/',
-    wizardUriBase: 'https://mypurecloud.github.io/purecloud-premium-app/wizard/',
+    wizardUriBase: 'http://localhost:8080/wizard/',
 
     // The actual URL of the landing page of your web app or your web site (when wizard has been run).
     // previously - defined as premiumAppURL
     // redirectURLOnWizardCompleted: 'http://localhost:8080/premium-app-sample/index.html',
-    redirectURLOnWizardCompleted: 'https://mypurecloud.github.io/purecloud-premium-app/premium-app-sample/index.html',
+    redirectURLOnWizardCompleted: 'https://bluegilltech.com/bg-park-call-app-post-install/',
     redirectURLWithParams: true,
 
     // Genesys Cloud assigned name for the premium app
@@ -55,7 +55,7 @@ export default {
 
     // Enable the optional 'Step 2' in the provisoning process
     // If false, it will not show the page or the step in the wizard
-    enableCustomSetupPageBeforeInstall: true,
+    enableCustomSetupPageBeforeInstall: false,
     // Enable the optional Post Custom Setup module in the install process
     // If true, it will invoke the postCustomSetup module (configure method) after the Genesys Cloud ones (provisioningInfo).
     enableCustomSetupStepAfterInstall: false,
@@ -71,7 +71,7 @@ export default {
     enableUninstall: true,
 
     // To be added to names of Genesys Cloud objects created by the wizard
-    prefix: 'PREMIUM_EXAMPLE_',
+    prefix: 'bg_',
 
     // These are the Genesys Cloud items that will be added and provisioned by the wizard
     // To see the sample configuration of all possible objects please consult
@@ -93,29 +93,29 @@ export default {
         ],
         'group': [
             {
-                'name': 'Supervisors',
-                'description': 'Supervisors have the ability to watch a queue for ACD conversations.',
+                'name': 'ParkCalls',
+                'description': 'Group for Park Calls feature to be enabled.',
             }
         ],
-        'app-instance': [
+        'interaction-widget': [
             {
-                'name': 'Partner Enablement Tools',
-                'url': 'https://genesysappfoundry.github.io/partner-enablement-tools/index.html?langTag={{gcLangTag}}&hostOrigin={{gcHostOrigin}}&targetEnv={{gcTargetEnv}}',
-                'type': 'standalone',
-                'groups': ['Supervisors']
+                'name': 'Park Calls Widget',
+                'url': 'https://thankful-dune-012237e1e.5.azurestaticapps.net?gcHostOrigin={{gcHostOrigin}}&gcTargetEnv={{gcTargetEnv}}&gcConversationId={{gcConversationId}}&bgParkHoldQueueName=ParkHoldQueue',
+                'sandbox': 'allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads',
+                'permissions': '',
+                'groups': ['ParkCalls'],
+                'communicationTypeFilter': 'call',
+                'advanced': {}
             }
         ],
         'oauth-client': [
             {
-                'name': 'OAuth Client',
-                'description': 'Generated Client that\'s passed to the App Backend',
-                'roles': ['Role'],
-                'authorizedGrantType': 'CLIENT-CREDENTIALS',
-                /** NOTE: 
-                 * If you want to learn how you can send the created credentials back to your system,
-                 * Please read about the Post Custom Setup module here:
-                 * https://developer.genesys.cloud/appfoundry/premium-app-wizard/7-custom-setup#post-custom-setup-module
-                 */
+                'name': 'Park Calls Auth Client',
+                'description': 'Generated Client that\'s used by the App FrontEnd',
+                'registeredRedirectUri': ['https://thankful-dune-012237e1e.5.azurestaticapps.net'],
+                'scope': ['user-basic-info', 'analytics', 'users', 'routing', 'conversations'],
+                'authorizedGrantType': 'TOKEN',
+                'accessTokenValiditySeconds': 86400
             }
         ]
     },
@@ -128,6 +128,7 @@ export default {
         'postCustomSetup': [],
         'role': ['authorization:role:view', 'authorization:role:add', 'authorization:grant:add'],
         'group': ['directory:group:add'],
+        'routing':['routing:queue:view','routing:queue:add','routing:queue:edit'],
         'app-instance': ['integrations:integration:view', 'integrations:integration:add', 'integrations:integration:edit'],
         'widget-instance': ['integrations:integration:view', 'integrations:integration:add', 'integrations:integration:edit'],
         'interaction-widget': ['integrations:integration:view', 'integrations:integration:add', 'integrations:integration:edit'],
@@ -147,6 +148,7 @@ export default {
         'postCustomSetup': [],
         'role': ['authorization:role:delete'],
         'group': ['directory:group:delete'],
+        'routing':['routing:queue:view','routing:queue:delete','routing:queue:edit'],
         'app-instance': ['integrations:integration:delete'],
         'widget-instance': ['integrations:integration:delete'],
         'interaction-widget': ['integrations:integration:delete'],

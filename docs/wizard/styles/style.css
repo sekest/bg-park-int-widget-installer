@@ -135,7 +135,7 @@ button {
     cursor: pointer;
     outline: 0;
 
-    background-color: #00AE9E;
+    background-color: #07589A;
     color: #fff;
 }
 
@@ -172,7 +172,7 @@ button.btn-prev:hover {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    color: #3B90AA;
+    color: #07589A;
     font-family: "Roboto","Lato", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -197,7 +197,7 @@ button.btn-prev:hover {
 
 .message-title{
     padding: 10px;
-    color: #00AE9E;
+    color: #07589A;
     font-size: 1em;
     font-weight: bold;
     text-align: left;

@@ -6,7 +6,7 @@ export default
             "txt-premium-install": "Install",
             "txt-premium-summary": "Summary",
             "txt-greeting": "Hi",
-            "txt-greeting-2": "Welcome to the Premium App Example Application",
+            "txt-greeting-2": "Welcome to the Bluegill Technologies Park Call Application",
             "txt-start": "Start",
             "txt-setup": "Custom Setup",
             "txt-install": "Install",
