@@ -2,7 +2,7 @@ export default {
     clientID: '2494c879-dc5b-4e0a-9d16-fc9543b6d125',
 
     // wizardUriBase: 'http://localhost:8080/wizard/',
-    wizardUriBase: 'https://az02.bluegilltech.com/',
+    wizardUriBase: 'https://az02.bluegilltech.com',
 
     // The actual URL of the landing page of your web app or your web site (when wizard has been run).
     // previously - defined as premiumAppURL
@@ -100,7 +100,7 @@ export default {
         'interaction-widget': [
             {
                 'name': 'Park Calls Widget',
-                'url': 'https://thankful-dune-012237e1e.5.azurestaticapps.net?gcHostOrigin={{gcHostOrigin}}&gcTargetEnv={{gcTargetEnv}}&gcConversationId={{gcConversationId}}&bgParkHoldQueueName=ParkHoldQueue',
+                'url': 'https://az01.bluegilltech.com?gcHostOrigin={{gcHostOrigin}}&gcTargetEnv={{gcTargetEnv}}&gcConversationId={{gcConversationId}}&bgParkHoldQueueName=ParkHoldQueue',
                 'sandbox': 'allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads',
                 'permissions': '',
                 'groups': ['ParkCalls'],
@@ -112,7 +112,7 @@ export default {
             {
                 'name': 'Park Calls Auth Client',
                 'description': 'Generated Client that\'s used by the App FrontEnd',
-                'registeredRedirectUri': ['https://thankful-dune-012237e1e.5.azurestaticapps.net'],
+                'registeredRedirectUri': ['https://az01.bluegilltech.com'],
                 'scope': ['user-basic-info', 'analytics', 'users', 'routing', 'conversations'],
                 'authorizedGrantType': 'TOKEN',
                 'accessTokenValiditySeconds': 86400
