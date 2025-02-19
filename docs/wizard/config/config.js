@@ -35,7 +35,7 @@ export default {
     // Default Values for fail-safe/testing. Shouldn't have to be changed since the app
     // must be able to determine the environment from the query parameter 
     // of the integration's URL
-    defaultGcEnvironment: 'usw2.pure.cloud',
+    defaultGcEnvironment: 'mypurecloud.com',
     defaultLanguage: 'en-us',
     // List available language assets - manage gcLangTag with possible formats like: en, en-US, en_US, en-CA, en_CA, ...
     // Values in lower case, using - or no separator
@@ -43,7 +43,7 @@ export default {
         'en-us': 'English',
         'es': 'Español'
     },
-    enableLanguageSelection: true,
+    enableLanguageSelection: false,
 
     // The names of the query parameters to check in 
     // determining language and environment
@@ -88,13 +88,15 @@ export default {
                         'actionSet': ['*'],
                         'allowConditions': false
                     }
-                ]
+                ],
+                'assignToSelf': true
             }
         ],
         'group': [
             {
                 'name': 'ParkCalls',
                 'description': 'Group for Park Calls feature to be enabled.',
+                'assignToSelf': true
             }
         ],
         'interaction-widget': [
@@ -104,8 +106,7 @@ export default {
                 'sandbox': 'allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads',
                 'permissions': '',
                 'groups': ['ParkCalls'],
-                'communicationTypeFilter': 'call',
-                'advanced': {}
+                'communicationTypeFilter': 'call'
             }
         ],
         'oauth-client': [

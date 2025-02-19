@@ -1,12 +1,12 @@
 export default
     {
         "en-us": {
-            "txt-premium-app-name": "Premium App",
+            "txt-premium-app-name": "Bluegill Park App",
             "txt-premium-home": "Home",
             "txt-premium-install": "Install",
             "txt-premium-summary": "Summary",
             "txt-greeting": "Hi",
-            "txt-greeting-2": "Welcome to the Bluegill Technologies Park Call Application",
+            "txt-greeting-2": "Welcome to the Bluegill Technologies Park Call App",
             "txt-start": "Start",
             "txt-setup": "Custom Setup",
             "txt-install": "Install",
@@ -18,7 +18,7 @@ export default
             "txt-product-available": "Product Available",
             "txt-product-not-available": "Product not available",
             "txt-available-message": "Reminders:",
-            "txt-not-available-message": "We're sorry but your Genesys Cloud org does not have the Premium App Sample Product enabled. Please contact Genesys Cloud.",
+            "txt-not-available-message": "We're sorry but your Genesys Cloud org does not have the Bluegill Technologies Park App enabled. Please contact Genesys Cloud.",
             "txt-byoc-not-available": "BYOC Cloud not available",
             "txt-no-byoc-message": "We're sorry but your Genesys Cloud org does not have the BYOC Cloud Add-On enabled. Please contact Genesys Cloud.",
             "txt-unlicensed": "Access Denied",
