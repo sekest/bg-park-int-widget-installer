@@ -11,6 +11,7 @@ const client = platformClient.ApiClient.instance;
 const usersApi = new platformClient.UsersApi();
 const integrationsApi = new platformClient.IntegrationsApi();
 const authorizationApi = new platformClient.AuthorizationApi();
+const organizationsApi = new platformClient.OrganizationsApi();
 
 // Constants
 const premiumAppIntegrationTypeId = config.premiumAppIntegrationTypeId;
@@ -578,7 +579,8 @@ async function onInstallationSummaryEnter() {
  * NOTE: Add your code for any custom initialization functionality here.
  */
 async function onCustomSetupEnter() {
-  console.log('Custom Page Here');
+  const orgData = await organizationsApi.me()
+  console.log(`Welcome Org:${orgData.name}`);
 }
 
 /**
