@@ -580,7 +580,7 @@ async function onInstallationSummaryEnter() {
  */
 async function onCustomSetupEnter() {
   const orgData = await organizationsApi.getOrganizationsMe()
-  console.log(`Welcome Org:${orgData.name}`);
+  console.log(`Welcome Org: ${orgData.name}`);
 }
 
 /**
