@@ -1,8 +1,8 @@
 export default {
     clientID: '2494c879-dc5b-4e0a-9d16-fc9543b6d125',
 
-    wizardUriBase: 'http://localhost:8080/wizard/',
-    // wizardUriBase: 'https://az02.bluegilltech.com/',
+    // wizardUriBase: 'http://localhost:8080/wizard/',
+    wizardUriBase: 'https://install-pca.bluegillapp.com/',
 
     // The actual URL of the landing page of your web app or your web site (when wizard has been run).
     // previously - defined as premiumAppURL
