@@ -1,8 +1,8 @@
 export default {
     clientID: '2494c879-dc5b-4e0a-9d16-fc9543b6d125',
 
-    // wizardUriBase: 'http://localhost:8080/wizard/',
-    wizardUriBase: 'https://az02.bluegilltech.com/',
+    wizardUriBase: 'http://localhost:8080/wizard/',
+    // wizardUriBase: 'https://az02.bluegilltech.com/',
 
     // The actual URL of the landing page of your web app or your web site (when wizard has been run).
     // previously - defined as premiumAppURL
@@ -55,7 +55,7 @@ export default {
 
     // Enable the optional 'Step 2' in the provisoning process
     // If false, it will not show the page or the step in the wizard
-    enableCustomSetupPageBeforeInstall: true,
+    enableCustomSetupPageBeforeInstall: false,
     // Enable the optional Post Custom Setup module in the install process
     // If true, it will invoke the postCustomSetup module (configure method) after the Genesys Cloud ones (provisioningInfo).
     enableCustomSetupStepAfterInstall: false,
@@ -102,7 +102,7 @@ export default {
         'interaction-widget': [
             {
                 'name': 'Park Calls Widget',
-                'url': 'https://az01.bluegilltech.com?gcHostOrigin={{gcHostOrigin}}&gcTargetEnv={{gcTargetEnv}}&gcConversationId={{gcConversationId}}&bgParkHoldQueueName=ParkHoldQueue',
+                'url': 'https://az01.bluegilltech.com?gcHostOrigin={{gcHostOrigin}}&gcTargetEnv={{gcTargetEnv}}&gcConversationId={{gcConversationId}}&bgParkHoldQueueName=bg_ParkHold',
                 'sandbox': 'allow-forms,allow-modals,allow-popups,allow-presentation,allow-same-origin,allow-scripts,allow-downloads',
                 'permissions': '',
                 'groups': ['ParkCalls'],

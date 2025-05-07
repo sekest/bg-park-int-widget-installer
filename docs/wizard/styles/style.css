@@ -135,13 +135,13 @@ button {
     cursor: pointer;
     outline: 0;
 
-    background-color: #07589A;
+    background-color: #0066CC;
     color: #fff;
 }
 
 
 button:hover {
-    background-color: #00B8AA;
+    background-color: #87cefa;
 }
 
 button.btn-prev {
@@ -172,7 +172,7 @@ button.btn-prev:hover {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    color: #07589A;
+    color: #0066CC;
     font-family: "Roboto","Lato", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -197,7 +197,7 @@ button.btn-prev:hover {
 
 .message-title{
     padding: 10px;
-    color: #07589A;
+    color: #0066CC;
     font-size: 1em;
     font-weight: bold;
     text-align: left;
@@ -267,10 +267,6 @@ hr {
 }
 
 .provisioned-link {
-    color: #00AE9E;
+    color: #87cefa;
     text-decoration: none;
-}
-
-.custompage-table {
-    text-align: center;
 }
