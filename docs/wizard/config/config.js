@@ -58,7 +58,7 @@ export default {
     enableCustomSetupPageBeforeInstall: false,
     // Enable the optional Post Custom Setup module in the install process
     // If true, it will invoke the postCustomSetup module (configure method) after the Genesys Cloud ones (provisioningInfo).
-    enableCustomSetupStepAfterInstall: false,
+    enableCustomSetupStepAfterInstall: true,
 
     // Enable the dynamic build of the Install Summary on install.html page
     enableDynamicInstallSummary: true,
