@@ -42,7 +42,7 @@ async function configure(logFunc, installedData, user, gcClient) {
                 oauthClientSecret: getInstalledValue('oauth-client', config.provisioningInfo, 'secret'),
                 // wsCredentialId: getInstalledValue('gc-data-actions', config.provisioningInfo, 'credentialId'),
                 // wsCredentialType: getInstalledValue('gc-data-actions', config.provisioningInfo, 'credentialType'),
-                widgetDeploymentKey: getInstalledValue('widget-deployment', config.provisioningInfo, 'id'),
+                // widgetDeploymentKey: getInstalledValue('widget-deployment', config.provisioningInfo, 'id'),
                 openMessagingIntegrationId: getInstalledValue('open-messaging', config.provisioningInfo, 'id')
             };
 
