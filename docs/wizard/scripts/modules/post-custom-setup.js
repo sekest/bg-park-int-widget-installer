@@ -43,7 +43,7 @@ async function configure(logFunc, installedData, user, gcClient) {
                 // wsCredentialId: getInstalledValue('gc-data-actions', config.provisioningInfo, 'credentialId'),
                 // wsCredentialType: getInstalledValue('gc-data-actions', config.provisioningInfo, 'credentialType'),
                 // widgetDeploymentKey: getInstalledValue('widget-deployment', config.provisioningInfo, 'id'),
-                openMessagingIntegrationId: getInstalledValue('open-messaging', config.provisioningInfo, 'id')
+                // openMessagingIntegrationId: getInstalledValue('open-messaging', config.provisioningInfo, 'id')
             };
 
             // Check for any undefined values in provisionBody
